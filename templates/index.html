@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css" media="all">
+	body{
+		align-content: center;
+		width:25%;
+		height:100%;
+	}
+	fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #FFF4F4;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+	textarea{
+	width:250px;
+	height:100px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #FFC2DC;
+	outline: none;
+	color: #F072A9;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #FFD5E7;
+	-moz-box-shadow: inset 5px 5px 4px #FFD5E7;
+	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+	background: #FFEFF6;
+	width:50%;
+	font-family: cursive;
+	align-content: center;
+}
+
+	}
+</style>
+<head>
+	<title>FLAMES</title>
+</head>
+<body>
+{% block form%}	
+<form action="http://192.168.42.90:8355/flames" method="POST"> <!-- the ip address of the system u connect -->
+	<fieldset>
+	<label>Boy name</label>
+	<input type="text" class="form-control" name="boy" placeholder="Enter name"/><br><br>
+	<label>Girl name</label>
+	<input type="text" class="form-control" name="girl" placeholder="Enter name"/><br><br>
+	<button type="submit" class="btn btn-primary btn-xl" name="submit" value="submit"/>submit</button>
+	</fieldset>
+	<textarea>
+	{{ result }}
+    </textarea>
+</form>
+{% endblock form%}
+</body>
+</html>
